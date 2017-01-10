@@ -1,0 +1,31 @@
+/* Custom Css*/
+.mtb60 {
+    margin: 60px 0;
+}
+li.developby {
+    text-align: center;
+    margin-bottom: 20px;
+}
+li.developby a {
+    display: inline-block;
+    padding: 10px 0;
+}
+.sidebar ul.nav li.developby a:hover {
+    background: transparent;
+}
+.items {
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+}
+ul.nav.menu {
+    margin-top: 20px;
+}
+.add-user {
+    margin: 30px 0;
+}
+.error {
+    color: brown;
+}
+.success {
+    color: darkgreen;
+}
