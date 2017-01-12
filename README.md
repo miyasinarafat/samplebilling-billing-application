@@ -2,6 +2,7 @@
 SampleBilling is a sample billing application for sample work.
 
 **In this application could do** 
+
 1. Add, view, edit, delete user.
 2. User list.
 3. Trash user list.
