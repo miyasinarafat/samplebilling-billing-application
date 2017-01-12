@@ -1,4 +1,5 @@
 <?
+//include_once "../vendor/autoload.php";
 include_once "../src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -18,8 +19,8 @@ include_once "sidebar.php";
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
-                            <strong class="success"><? $obj->validationMessage("storeSuccess") ?></strong>
-                            <form class="add-user" role="form" action="store.php" method="post">
+                            <strong class="success"><? $obj->validationMessage("storeSuccess"); ?></strong>
+                            <form class="mtb30" role="form" action="store.php" method="post">
                                 <div class="form-group">
                                     <label>Name</label>
                                     <input class="form-control" placeholder="Name" type="text" name="name" required>

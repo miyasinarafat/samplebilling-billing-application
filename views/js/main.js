@@ -44,3 +44,30 @@ function rowStyle(row, index) {
     }
     return {};
 }
+$(document).ready(function () {
+    $('.btnNext').click(function (e) {
+        e.preventDefault();
+
+        var amountValue = $(this)
+            .closest('fieldset')
+            .find('div.form-group input#amount').val();
+        var bikashValue = $(this)
+            .closest('fieldset')
+            .find('div.form-group input#bkasht_id').val();
+
+        if (amountValue === '') {
+            alert("Sorry You have to provide amount in digits");
+        }
+        else if (bikashValue === '') {
+            alert("Sorry You have to provide Bkash Transaction ID in digits");
+        } else {
+            $(this).closest('fieldset').slideUp().next().slideDown();
+        }
+    });
+    $('.btnPrev').click(function (e) {
+        e.preventDefault();
+        $(this).closest('fieldset').slideUp().prev().slideDown();
+
+    });
+});
+

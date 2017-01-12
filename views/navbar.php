@@ -15,18 +15,18 @@
                         <svg class="glyph stroked male-user">
                             <use xlink:href="#stroked-male-user"></use>
                         </svg>
-                        User
+                        <? echo $_SESSION['acc_data']['name'];?>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">
+                        <li><a href="profile.php?id=<? echo $_SESSION['Login_data']['unique_id'];?>">
                                 <svg class="glyph stroked male-user">
                                     <use xlink:href="#stroked-male-user"></use>
                                 </svg>
                                 Profile
                             </a></li>
 
-                        <li><a href="#">
+                        <li><a href="logout.php?id=<? echo $_SESSION['Login_data']['unique_id'];?>">
                                 <svg class="glyph stroked cancel">
                                     <use xlink:href="#stroked-cancel"></use>
                                 </svg>
