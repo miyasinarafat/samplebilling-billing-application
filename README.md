@@ -12,7 +12,8 @@ SampleBilling is a sample billing application for sample work.
 7. Login and Logout option.
 8. Admin and user role.
 9. As a user i could sent money request.
-10. And much more...
+10. As a admin i could accept or due money request.
+11. And much more...
 
 **Note:**
-Create a database with (SampleBilling) name and Import tha SQL file in this database.
+Create a database with (SampleBilling) this name and Import the SQL file into those database.

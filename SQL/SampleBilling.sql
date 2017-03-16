@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 12, 2017 at 08:34 অপরাহ্ণ
+-- Generation Time: Mar 16, 2017 at 01:11 অপরাহ্ণ
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -19,6 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `SampleBilling`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `php_bkash`
+--
+
+CREATE TABLE `php_bkash` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `trxId` int(11) DEFAULT NULL,
+  `sender` varchar(15) DEFAULT NULL,
+  `ref` varchar(100) DEFAULT NULL,
+  `amount` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -77,12 +91,20 @@ CREATE TABLE `user_table` (
 --
 
 INSERT INTO `user_table` (`id`, `unique_id`, `name`, `password`, `email`, `phone`, `fb_profile_url`, `is_admin`, `is_delete`, `created`, `modified`, `restore`, `deleted`) VALUES
-(1, '587537ab98cd9', 'MD Iyasin Arafat', '@A123@456', 'miyasinarafat@gmail.com', '01921875585', 'https://www.facebook.com/md.iyasin.5', 1, 0, '2017-01-11 01:36:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, '5877c4c65e817', 'Naim Islam', '123456', 'menaimislam@gmail.com', '016872626562', 'https://www.facebook.com/menaimislam', 0, 0, '2017-01-13 12:02:46', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, '587537ab98cd9', 'MD Iyasin Arafat', '@A123@456', 'arafat@gmail.com', '01921875585', 'https://www.facebook.com', 1, 0, '2017-01-11 01:36:11', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, '5877c4c65e817', 'Naim Islam', '123456', 'naim@gmail.com', '016872626562', 'https://www.facebook.com', 0, 0, '2017-01-13 12:02:46', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, '58ca67c8348af', 'test', 'test', 'test@gmail.com', '0192187558500', 'https://www.facebook.com', 0, 1, '2017-03-16 04:24:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2017-03-16 04:24:16');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `php_bkash`
+--
+ALTER TABLE `php_bkash`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `trxId` (`trxId`);
 
 --
 -- Indexes for table `transaction_table`
@@ -101,6 +123,11 @@ ALTER TABLE `user_table`
 --
 
 --
+-- AUTO_INCREMENT for table `php_bkash`
+--
+ALTER TABLE `php_bkash`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `transaction_table`
 --
 ALTER TABLE `transaction_table`
@@ -109,7 +136,7 @@ ALTER TABLE `transaction_table`
 -- AUTO_INCREMENT for table `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

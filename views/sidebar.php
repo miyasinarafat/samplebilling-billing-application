@@ -8,7 +8,7 @@
                     <svg class="glyph stroked dashboard-dial">
                         <use xlink:href="#stroked-dashboard-dial"></use>
                     </svg>
-                    Users List</a></li>
+                    Dashboard</a></li>
                 <li><a href="trash-item.php?id=<? echo $_SESSION['Login_data']['unique_id'];?>">
                         <svg class="ticon glyph stroked basket ">
                             <use xlink:href="#stroked-basket"></use></svg>
