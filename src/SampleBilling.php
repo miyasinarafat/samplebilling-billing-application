@@ -34,7 +34,7 @@ class SampleBilling
     {
         session_start();
         date_default_timezone_set("Asia/Dhaka");
-        $this->con = new PDO('mysql:host=localhost;dbname=SampleBilling', "root", "");
+        $this->con = new PDO('mysql:host=localhost;dbname=samplebilling', "valet", "valet1234");
     }
 
     public function prepare($data)

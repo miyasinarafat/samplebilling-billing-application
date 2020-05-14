@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "../src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -25,7 +25,7 @@ include_once "sidebar.php";
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong class="success"><? $obj->validationMessage("Login") ?></strong>
+                            <strong class="success"><?php $obj->validationMessage("Login") ?></strong>
 
                             <h3>Name: <?php echo $onedata['name'] ?></h3>
                             <h3>Email: <?php echo $onedata['email'] ?></h3>
@@ -41,6 +41,6 @@ include_once "sidebar.php";
 <!--/Main Content-->
 
 
-<?
+<?php
 include_once "footer.php"
 ?>

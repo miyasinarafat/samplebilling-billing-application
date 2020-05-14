@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "../src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -22,7 +22,7 @@ include_once "sidebar.php";
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
-                            <strong class="success"><? $obj->validationMessage("orderS") ?></strong>
+                            <strong class="success"><?php $obj->validationMessage("orderS") ?></strong>
                             <form id="request-moneyf" class="form-horizontal request-money-form mtb30"
                                   action="request-store.php" method="post">
                                 <fieldset>
@@ -79,6 +79,6 @@ include_once "sidebar.php";
 <!--/Main Content-->
 
 
-<?
+<?php
 include_once "footer.php"
 ?>

@@ -17,7 +17,7 @@ include_once "header.php";
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong class="error"><? $obj->validationMessage("Errors_R"); ?></strong>
+                            <strong class="error"><?php $obj->validationMessage("Errors_R"); ?></strong>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ include_once "header.php";
 </div>
 <!--/Main Content-->
 
-<?
+<?php
 include_once "footer.php"
 ?>
 

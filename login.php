@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -29,9 +29,9 @@ $obj = new SampleBilling();
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">Log in</div>
                 <div class="panel-body">
-                    <strong class="error"><? $obj->validationMessage("Is_D") ?></strong>
-                    <strong class="error"><? $obj->validationMessage("U_P") ?></strong>
-                    <strong class="success"><? $obj->validationMessage("Logout_M") ?></strong>
+                    <strong class="error"><?php $obj->validationMessage("Is_D") ?></strong>
+                    <strong class="error"><?php $obj->validationMessage("U_P") ?></strong>
+                    <strong class="success"><?php $obj->validationMessage("Logout_M") ?></strong>
 
                     <form class="mtb30" role="form" action="log-store.php" method="post">
                         <fieldset>
@@ -43,7 +43,6 @@ $obj = new SampleBilling();
                             </div>
                             <button class="btn btn-primary">Login</button>
                         </fieldset>
-                        <div class="text-center"><p>Develop by <a href="//themeyellow.con">ThemeYellow</a></p></div>
                     </form>
                 </div>
             </div>

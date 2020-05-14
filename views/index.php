@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "../src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -35,7 +35,7 @@ include_once "sidebar.php";
                         </svg>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><? echo $countNewOrder['is_new']; ?></div>
+                        <div class="large"><?php echo $countNewOrder['is_new']; ?></div>
                         <div class="text-muted">New Orders</div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ include_once "sidebar.php";
                         </svg>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><? echo $countCompleteOrder['is_accept']; ?></div>
+                        <div class="large"><?php echo $countCompleteOrder['is_accept']; ?></div>
                         <div class="text-muted">CompleteOrders</div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ include_once "sidebar.php";
                         </svg>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><? echo $countUsers['id'];?></div>
+                        <div class="large"><?php echo $countUsers['id'];?></div>
                         <div class="text-muted">Total Users</div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ include_once "sidebar.php";
                         </svg>
                     </div>
                     <div class="col-sm-9 col-lg-7 widget-right">
-                        <div class="large"><? echo $countTrashUser['is_delete'];?></div>
+                        <div class="large"><?php echo $countTrashUser['is_delete'];?></div>
                         <div class="text-muted">Suspend Users</div>
                     </div>
                 </div>
@@ -95,9 +95,9 @@ include_once "sidebar.php";
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong class="success"><? $obj->validationMessage("Login") ?></strong>
-                            <strong class="success"><? $obj->validationMessage("Res_Acc") ?></strong>
-                            <strong class="error"><? $obj->validationMessage("Sus_Acc") ?></strong>
+                            <strong class="success"><?php $obj->validationMessage("Login") ?></strong>
+                            <strong class="success"><?php $obj->validationMessage("Res_Acc") ?></strong>
+                            <strong class="error"><?php $obj->validationMessage("Sus_Acc") ?></strong>
                             <div class="table-responsive mtb30">
                                 <table class="table table-bordered table-hover">
                                     <thead>
@@ -111,7 +111,7 @@ include_once "sidebar.php";
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php
                                     if (isset($allData) && !empty($allData)){
                                     $serial = 1;
                                     foreach ($allData as $onedata) {
@@ -140,7 +140,7 @@ include_once "sidebar.php";
                                         </tr>
                                     <?php } } else { ?>
                                         <td colspan="6" class="text-center"><strong>No Available Data</strong></td>
-                                    <? } ?>
+                                    <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -154,6 +154,6 @@ include_once "sidebar.php";
 <!--/Main Content-->
 
 
-<?
+<?php
 include_once "footer.php"
 ?>

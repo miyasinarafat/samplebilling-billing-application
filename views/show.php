@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "../src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -65,6 +65,6 @@ include_once "sidebar.php";
 <!--/Main Content-->
 
 
-<?
+<?php
 include_once "footer.php"
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "../src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -32,24 +32,24 @@ include_once "sidebar.php";
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <? if ($_SESSION['Login_data']['is_admin'] == 1) { ?>
+                                        <?php if ($_SESSION['Login_data']['is_admin'] == 1) { ?>
                                             <th>Name</th>
                                             <th>Email</th>
-                                        <? } ?>
+                                        <?php } ?>
                                         <th>Amount (MYR)</th>
                                         <th>Bkash Transaction ID</th>
                                         <th>Created</th>
                                         <th>Accepted</th>
                                         <th>Remain</th>
-                                        <? if ($_SESSION['Login_data']['is_admin'] == 1) { ?>
+                                        <?php if ($_SESSION['Login_data']['is_admin'] == 1) { ?>
                                         <th>Paid or Due & Accept Order</th>
-                                        <? } else {?>
+                                        <?php } else {?>
                                         <th>Paid or Due</th>
-                                        <? } ?>
+                                        <?php } ?>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php
                                     if (isset($allData) && !empty($allData)){
 
                                     $serial = 1;
@@ -57,50 +57,50 @@ include_once "sidebar.php";
                                         ?>
                                         <tr>
                                             <td><?php echo $serial++; ?></td>
-                                            <? if ($_SESSION['Login_data']['is_admin'] == 1) { ?>
+                                            <?php if ($_SESSION['Login_data']['is_admin'] == 1) { ?>
                                                 <td><?php echo $onedata['name'] ?></td>
                                                 <td><?php echo $onedata['email'] ?></td>
-                                            <? } ?>
+                                            <?php } ?>
                                             <td><?php echo $onedata['amount'] ?></td>
                                             <td><?php echo $onedata['bkasht_id'] ?></td>
                                             <td><?php echo $onedata['created'] ?></td>
                                             <td><?php echo $onedata['accepted'] ?></td>
                                             <td><?php echo $onedata['remain'] ?></td>
                                             <td>
-                                                <? if ($onedata['is_accept'] == 1) { ?>
+                                                <?php if ($onedata['is_accept'] == 1) { ?>
                                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Paid">
                                                         <svg class="ticong glyph stroked checkmark">
                                                             <use xlink:href="#stroked-checkmark"></use>
                                                         </svg>
 
                                                     </a>
-                                                <? } else { ?>
+                                                <?php } else { ?>
                                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Due">
                                                         <svg class="ticonr glyph stroked cancel">
                                                             <use xlink:href="#stroked-cancel"></use>
                                                         </svg>
 
                                                     </a>
-                                                <? } ?>
-                                                <?
+                                                <?php } ?>
+                                                <?php
                                                 if ($_SESSION['Login_data']['is_admin'] == 1) {
                                                     if ($onedata['is_accept'] == 0) { ?>
-                                                        <a href="request-accept.php?accept_id=1&new_id=1&id=<? echo $onedata['unique_id']; ?>"
+                                                        <a href="request-accept.php?accept_id=1&new_id=1&id=<?php echo $onedata['unique_id']; ?>"
                                                            data-toggle="tooltip" data-placement="top" title="Accept Order">
                                                             <svg class="ticon glyph stroked checkmark">
                                                                 <use xlink:href="#stroked-checkmark"></use>
                                                             </svg>
 
                                                         </a>
-                                                    <? }
+                                                    <?php }
                                                 } ?>
                                             </td>
                                         </tr>
                                     <?php } } else {  if ($_SESSION['Login_data']['is_admin'] == 1) {?>
                                         <td colspan="9" class="text-center"><strong>No Available Data</strong></td>
-                                    <? } else { ?>
+                                    <?php } else { ?>
                                         <td colspan="7" class="text-center"><strong>No Available Data</strong></td>
-                                    <? } } ?>
+                                    <?php } } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -114,6 +114,6 @@ include_once "sidebar.php";
 <!--/Main Content-->
 
 
-<?
+<?php
 include_once "footer.php"
 ?>

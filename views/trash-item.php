@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "../src/SampleBilling.php";
 use App\SampleBilling\SampleBilling;
 
@@ -26,8 +26,8 @@ include_once "sidebar.php";
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong class="error"><? $obj->validationMessage("Sus_Acc") ?></strong>
-                            <strong class="error"><? $obj->validationMessage("dele_Acc") ?></strong>
+                            <strong class="error"><?php $obj->validationMessage("Sus_Acc") ?></strong>
+                            <strong class="error"><?php $obj->validationMessage("dele_Acc") ?></strong>
                             <div class="table-responsive mtb30">
                                 <table class="table table-bordered table-hover">
                                     <thead>
@@ -41,7 +41,7 @@ include_once "sidebar.php";
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?
+                                    <?php
                                     if (isset($allData) && !empty($allData)){
 
                                     $serial = 1;
@@ -66,7 +66,7 @@ include_once "sidebar.php";
                                         </tr>
                                     <?php } } else { ?>
                                     <td colspan="6" class="text-center"><strong>No Available Data</strong></td>
-                                    <? } ?>
+                                    <?php } ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -80,6 +80,6 @@ include_once "sidebar.php";
 <!--/Main Content-->
 
 
-<?
+<?php
 include_once "footer.php"
 ?>
